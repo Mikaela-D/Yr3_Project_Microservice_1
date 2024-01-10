@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(name = "confirmation-service", url = "http://localhost:8080")
 public interface UserServiceClient {
-    @PostMapping("/confirm")
-    String someDetails(@RequestBody UserDetails userDetails);
+    @PostMapping("/login")
+    String loginUser(@RequestBody UserDetails userDetails);
+
+    @PostMapping("/register")
+    String registerUser(@RequestBody UserDetails userDetails);
 }
