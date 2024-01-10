@@ -9,12 +9,12 @@ import java.util.List;
 public class UserService {
     private List<UserDetails> userList = new ArrayList<>();
 
-    public String loginUser(UserDetails user) {
+    public String loginUser(UserDetails userDetails) {
         return "User logged in successfully";
     }
 
-    public String registerUser(UserDetails user) {
-        userList.add(user);
+    public String registerUser(UserDetails userDetails) {
+        userList.add(userDetails);
         return "User registered successfully";
     }
 }
